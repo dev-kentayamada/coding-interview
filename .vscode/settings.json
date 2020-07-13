@@ -1,0 +1,6 @@
+{
+    "editor.suggest.showSnippets": false,
+    "git.autofetch": true,
+    "git.showPushSuccessNotification": true,
+    "git.supportCancellation": true,
+}
