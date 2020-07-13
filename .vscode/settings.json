@@ -1,7 +1,5 @@
 {
     "git.autofetch": true,
-    "git.showPushSuccessNotification": true,
-    "git.supportCancellation": true,
     "editor.quickSuggestions": false,
     "editor.parameterHints.enabled": false,
 }
