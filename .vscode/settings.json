@@ -1,5 +1,6 @@
 {
     "git.autofetch": true,
+    "git.confirmSync": false,
     "editor.quickSuggestions": false,
     "editor.parameterHints.enabled": false,
     "files.exclude": {
