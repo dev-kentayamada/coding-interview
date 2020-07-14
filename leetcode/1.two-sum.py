@@ -29,11 +29,11 @@ class Answer:
         return []
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        for i in range(len(nums)):
-            for k in range(i + 1, len(nums)):
-                if (nums[i] + nums[k] == target):
-                    return [i, k]
-        #return Answer.OnePass_HashTable(nums, target)
+        # for i in range(len(nums)):
+        #     for k in range(i + 1, len(nums)):
+        #         if (nums[i] + nums[k] == target):
+        #             return [i, k]
+        return Answer.OnePass_HashTable(nums, target)
         #return Answer.TwoPass_HashTable(nums, target)
 # @lc code=end
 
