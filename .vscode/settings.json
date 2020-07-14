@@ -6,4 +6,5 @@
     "files.exclude": {
         "**/__pycache__": true
     },
+    "python.formatting.provider": "none",
 }
