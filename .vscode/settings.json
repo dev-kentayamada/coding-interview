@@ -3,6 +3,7 @@
     "git.confirmSync": false,
     "editor.quickSuggestions": false,
     "editor.parameterHints.enabled": false,
+
     "files.exclude": {
         "**/__pycache__": true
     },
