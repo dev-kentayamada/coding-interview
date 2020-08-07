@@ -8,4 +8,7 @@
         "**/__pycache__": true
     },
     "python.formatting.provider": "black",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
 }
