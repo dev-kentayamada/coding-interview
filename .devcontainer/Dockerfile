@@ -15,5 +15,5 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:0-${VARIANT}
 #     && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 RUN sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y \
-    && sudo apt-get install -y nodejs python3-pip
-
+    && sudo apt-get install -y nodejs python3-pip \
+    && pip3 install autopep8
