@@ -37,6 +37,7 @@ class Solution:
             fast = fast.next.next
             if (slow == fast):
                 return True
+        return False
 
     def hasCycle(self, head: ListNode) -> bool:
         # original = self.original(head)  # Time O(n) | Space O(n)
