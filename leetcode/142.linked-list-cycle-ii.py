@@ -13,12 +13,21 @@
 
 
 class Solution:
-    def detectCycle(self, head: ListNode) -> ListNode:
+    def hash_table(self, head):
+        visited = set()
+        temp = head
+        while (temp):
+            if (temp in visited):
+                return temp
+            visited.add(temp)
+            temp = temp.next
+        return None
+
+    def floyd_cycle_algorithm(self, head):
         fast = head
         slow = head
         found = 0
 
-        # floyd’s Cycle-Finding Algorithm
         while (fast and slow and fast.next):
             fast = fast.next.next
             slow = slow.next
@@ -27,10 +36,13 @@ class Solution:
                 break
 
         if (found):  # if found cycle in the node
-            fast = head  # or slow=head
+            fast = head  # or slow = head
             while (fast != slow):
                 fast = fast.next
                 slow = slow.next
             return fast
         return None
+    def detectCycle(self, head: ListNode) -> ListNode:
+        return self.hash_table(head) # Time O(n) | Space O(n)
+        #return self.floyd_cycle_algorithm(head) # Time O(n) | Space O(1)
 # @lc code=end
