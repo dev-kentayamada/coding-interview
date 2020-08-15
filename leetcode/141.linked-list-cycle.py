@@ -30,17 +30,18 @@ class Solution:
 
     def two_pointers(self, head):
         slow = head
-        fast = head
+        fast = head.next.next
 
-        # Floyd’s Cycle-Finding Algorithm
-        while (slow and fast and fast.next):
+        while (slow != fast):
+            if (fast == None or fast.next == None):
+                return False
             slow = slow.next
             fast = fast.next.next
-            if (slow == fast):
-                return True
-        return False
+        return True
 
     def hasCycle(self, head: ListNode) -> bool:
+        if (head == None or head.next == None):
+            return False
         #return self.hash_table(head)  # Time O(n) | Space O(n)
         return self.two_pointers(head) # Time O(n) | Space O(1)
 # @lc code=end
