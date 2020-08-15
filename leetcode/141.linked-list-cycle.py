@@ -18,7 +18,7 @@ from typing import *
 
 
 class Solution:
-    def original(self, head):
+    def hash_table(self, head):
         s = set()
         temp = head
         while (temp):
@@ -28,10 +28,11 @@ class Solution:
             temp = temp.next
         return False
 
-    def floyd_cycle_detection(self, head):
+    def two_pointers(self, head):
         slow = head
         fast = head
 
+        # Floyd’s Cycle-Finding Algorithm
         while (slow and fast and fast.next):
             slow = slow.next
             fast = fast.next.next
@@ -40,8 +41,6 @@ class Solution:
         return False
 
     def hasCycle(self, head: ListNode) -> bool:
-        # original = self.original(head)  # Time O(n) | Space O(n)
-        # return original
-        floyd_cycle_detection = self.floyd_cycle_detection(head) # Time O(n) | Space O(1)
-        return floyd_cycle_detection
+        #return self.hash_table(head)  # Time O(n) | Space O(n)
+        return self.two_pointers(head) # Time O(n) | Space O(1)
 # @lc code=end
