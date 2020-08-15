@@ -19,12 +19,12 @@ from typing import *
 
 class Solution:
     def hash_table(self, head):
-        s = set()
+        visited = set()
         temp = head
         while (temp):
-            if (temp in s):
+            if (temp in visited):
                 return True
-            s.add(temp)
+            visited.add(temp)
             temp = temp.next
         return False
 
