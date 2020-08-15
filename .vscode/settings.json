@@ -8,4 +8,7 @@
         "**/__pycache__": true
     },
     "editor.suggestOnTriggerCharacters": false,
+    "python.formatting.autopep8Args": [
+        "--max-line-length 100"
+    ],
 }
