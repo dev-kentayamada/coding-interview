@@ -20,16 +20,22 @@ class Solution:
 
         odd_p, even_p = oddHead, evenHead
 
+        # traverse linked list
         while (head):
+            # create an odd nodes linked list
             odd_p.next = head
             odd_p = odd_p.next
+            # create an even nodes linked list
             even_p.next = head.next
             even_p = even_p.next
 
+            # check if there is node
             if (head.next == None):
                 break
-            head = head.next.next
+            else:
+                head = head.next.next
 
+        # concat odd node linked list and even node linked list
         odd_p.next = evenHead.next
 
         return oddHead.next
