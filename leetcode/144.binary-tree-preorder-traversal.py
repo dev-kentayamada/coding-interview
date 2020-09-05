@@ -17,13 +17,13 @@ class Solution:
             return []
         stack, answer = [root], []
         while stack:
-            root = stack.pop()
-            if root is not None:
-                answer.append(root.val)
-                if root.right is not None:
-                    stack.append(root.right)
-                if root.left is not None:
-                    stack.append(root.left)
+            node = stack.pop()
+            if node is not None:
+                answer.append(node.val)
+                if node.right is not None:
+                    stack.append(node.right)
+                if node.left is not None:
+                    stack.append(node.left)
         return answer
 
     # Reference: https://mingwho.com/posts/morris-traversal/
@@ -48,6 +48,6 @@ class Solution:
         return answer
 
     def preorderTraversal(self, root: TreeNode) -> List[int]:
-        # return self.iterations(root)  # Time O(n) | Space O(n)
-        return self.morrisTraversal(root)  # Time O(n) | Space O(n)
+        return self.iterations(root)  # Time O(n) | Space O(n)
+        # return self.morrisTraversal(root)  # Time O(n) | Space O(n)
 # @lc code=end
